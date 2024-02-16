@@ -9,8 +9,10 @@ intentos = 0
 while valor != secreto:
     if valor < secreto:
         valor=int(input("¡Demasiado pequeño! Inténtalo de nuevo:"))
+        intentos += 1
     if valor > secreto:
         valor=int(input("¡Demasiado grande! Inténtalo de nuevo:"))
+        intentos += 1
   
 print(f"¡Acertaste! Te ha costado {intentos} intentos.")
 

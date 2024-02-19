@@ -1,8 +1,10 @@
 valor1 = int(input('Introduce el primer numero: '))
 valor2 = int(input('Introduce el segundo numero: '))
 operacion = (input('Introduce la operación aritmética (+, -, * o /): '))
-resultado_final = 0
-
+while operacion != "+" or "-" or "*" or "/":
+    print("Debes introducir una operación correcta, vuelve a intentarlo")
+    operacion = input("Introduce la operación aritmética (+, -, * o /): ")
+    
 if operacion == "+":
     resultado_final = valor1 + valor2 
 elif operacion == "-":

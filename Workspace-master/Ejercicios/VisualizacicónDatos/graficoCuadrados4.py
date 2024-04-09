@@ -14,7 +14,7 @@ cuadrados=[1,4,9,16,25]
 'seaborn-v0_8-ticks', 'seaborn-v0_8-white', 'seaborn-v0_8-whitegrid', 'tableau-colorblind10']
  
 '''
-plt.style.use('seaborn-v0_8-white')
+plt.style.use('Solarize_Light2')
 
 fig, ax = plt.subplots()
 ax.plot(valores, cuadrados, linewidth=3)
@@ -31,4 +31,4 @@ plt.show()
 
 # Si queremos guardar las gráficas automáticamente:
 #plt.savefig('graficoCuadrados.png', bbox_inches='tight')
-plt.savefig('graficoCuadrados.png')
+fig.savefig('graficoCuadrados.png')

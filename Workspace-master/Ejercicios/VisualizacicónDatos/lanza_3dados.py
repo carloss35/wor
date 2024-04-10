@@ -3,25 +3,26 @@ from plotly import offline
 
 from dado import Dado
 
-# Crea dos dados D6.
+# Crea tres dados D6.
 dado1 = Dado()
 dado2 = Dado()
+dado3 = Dado()
 
 # Realiza varios lanzamientos y guarda los resultados en una lista.
 resultados = []
 for lanzamiento_num in range(10000):
-    resultado = dado1.lanza() + dado2.lanza()
+    resultado = dado1.lanza() + dado2.lanza() + dado3.lanza()
     resultados.append(resultado)
     
 # Analiza los resultados.
 frecuencias = []
-maximo_resultado = dado1.num_caras + dado2.num_caras
-for valor in range(2, maximo_resultado+1):
+maximo_resultado = dado1.num_caras + dado2.num_caras +dado3.num_caras
+for valor in range(3, maximo_resultado+1):
     frecuencia = resultados.count(valor)
     frecuencias.append(frecuencia)
     
 # Visualiza los resultados.
-valores_x = list(range(2, maximo_resultado+1))
+valores_x = list(range(3, maximo_resultado+1))
 datos = [Bar(x=valores_x, y=frecuencias)]
 
 config_eje_x = {'title': 'Resultado', 'dtick': 1}
